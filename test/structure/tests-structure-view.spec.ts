@@ -63,7 +63,7 @@ describe('structure/structure-view', function () {
       var streamer = new StringStreamer(str)
       var cifParser = new CifParser(streamer)
       return cifParser.parse().then(function (structure) {
-        var selection = new Selection('179-490:D or 384-394:A')
+        var selection = new Selection('179-490:D or 370-380:A')
         var sview = new StructureView(structure, selection)
         expect(structure.atomStore.count).toBe(10274)
         expect(sview.atomCount).toBe(2292)
