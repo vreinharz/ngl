@@ -988,10 +988,10 @@ class CifParser extends StructureParser {
               //
 
               const resname = ls[ labelCompId ]
-              const resno = parseInt(ls[ authSeqId !== -1 ? authSeqId : labelSeqId ])
+              const resno = parseInt(ls[ labelSeqId ])
               let inscode = ls[ pdbxPDBinsCode ]
               inscode = (inscode === '?') ? '' : inscode
-              const chainname = ls[ authAsymId ]
+              const chainname = ls[ labelAsymId ]
               const chainid = ls[ labelAsymId ]
               const hetero = (ls[ groupPDB ][ 0 ] === 'H')
 
