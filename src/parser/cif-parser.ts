@@ -770,7 +770,7 @@ class CifParser extends StructureParser {
     var first: boolean|null = null
     var pointerNames: string[] = []
 
-    var authAsymId: number, authSeqId: number, labelSeqId: number,
+    var labelSeqId: number,
       labelAtomId: number, labelCompId: number, labelAsymId: number, labelEntityId: number, labelAltId: number,
       groupPDB: number, id: number, typeSymbol: number, pdbxPDBmodelNum: number, pdbxPDBinsCode: number,
       CartnX: number, CartnY: number, CartnZ: number, bIsoOrEquiv: number, occupancy: number
@@ -912,8 +912,6 @@ class CifParser extends StructureParser {
               const ls = line.split(reWhitespace)
 
               if (first) {
-                authAsymId = pointerNames.indexOf('auth_asym_id')
-                authSeqId = pointerNames.indexOf('auth_seq_id')
                 labelSeqId = pointerNames.indexOf('label_seq_id')
                 labelAtomId = pointerNames.indexOf('label_atom_id')
                 labelCompId = pointerNames.indexOf('label_comp_id')
